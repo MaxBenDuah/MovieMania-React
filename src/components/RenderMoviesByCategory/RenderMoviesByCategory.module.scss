@@ -1,3 +1,9 @@
+.mainCategory {
+  // max-width: 114rem;
+  // margin: auto;
+  padding: 5rem;
+}
+
 .renderMoviesCategoryCont {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -36,7 +42,7 @@
     // align-items: center;
 
     .movieDets {
-      margin-top: 6rem;
+      margin-top: 3rem;
       padding: 5px;
 
       .title {

@@ -16,6 +16,8 @@ function MovieCategory({ movie }) {
     genre_ids: genreArr,
   } = movie;
 
+  const desc = overview.split(" ").slice(0, 50).join(" ");
+
   useEffect(
     function () {
       async function getGenres() {
@@ -62,7 +64,7 @@ function MovieCategory({ movie }) {
             <p>{date}</p>
           </div>
           <p className={styles.rating}>⭐️ {Number(rating).toFixed(1)}</p>
-          <p className={styles.description}>{overview}</p>
+          <p className={styles.description}>{desc}</p>
         </div>
       </div>
     </li>

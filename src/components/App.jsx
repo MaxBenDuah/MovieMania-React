@@ -6,11 +6,12 @@ import Pagination from "./Pagination";
 import MovieListButtons from "./RenderMoviesByCategory/MovieListButtons";
 import Logo from "./Logo";
 import Header from "./Header/Header";
-import RenderMoviesByCategory from "./RenderMoviesByCategory/RenderMoviesByCategory";
-import LoadingSpinner from "./Loader/LoadingSpinner";
+// import RenderMoviesByCategory from "./RenderMoviesByCategory/RenderMoviesByCategory";
+// import LoadingSpinner from "./Loader/LoadingSpinner";
 import RenderSearchedMovies from "./Search/RenderSearchedMovies";
 import PopupMovieDetails from "./PopupMovieDetails/PopupMovieDetails";
 import WatchedMovies from "./WatchedMovies/WatchedMovies";
+import CategoryMovies from "./RenderMoviesByCategory/CategoryMovies";
 
 // const KEY = "9b22856c339406c84c600cdd45f5d532";
 
@@ -74,13 +75,15 @@ function App() {
         />
       </Header>
 
-      <div>
+      {/* <div>
         {isLoading ? (
           <LoadingSpinner size={400} color="#ff5733" />
         ) : (
           <RenderMoviesByCategory movies={movies} />
         )}
-      </div>
+      </div> */}
+
+      <CategoryMovies movies={movies} isLoading={isLoading} />
       <RenderSearchedMovies
         query={query}
         setIsLoading={setIsLoading}
