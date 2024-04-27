@@ -1,0 +1,84 @@
+.mainSearchCont {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  background-color: #fa8f45;
+  width: 21%;
+  height: 900px;
+  overflow: auto;
+}
+
+.search {
+  width: 10%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 100px;
+  font-size: 1.6rem;
+  transition: width 0.3s ease; /* Add transition for width */
+
+  padding-left: 3.5rem; /* Adjust as needed */
+  background-image: url("./magnifying-glass.svg"); /* Path to your search icon */
+  background-size: 2rem; /* Adjust size as needed */
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  font-family: inherit;
+  color: #190b02;
+
+  &.expanded {
+    width: 22%; /* Adjust expanded width as needed */
+    padding-left: 3.5rem; /* Adjust padding for expanded state */
+    filter: invert(75%) sepia(11%) saturate(543%) hue-rotate(221deg)
+      brightness(92%) contrast(89%);
+  }
+}
+
+.listSearch {
+  // display: flex;
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fef1e8;
+  }
+  // gap: 2rem;
+  // justify-items: center;
+}
+
+.searchedImg {
+  width: 100%;
+  display: block;
+  justify-self: end;
+  padding: 8px;
+}
+
+.movieDets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 8px;
+}
+
+.genreCont {
+  list-style: none;
+  display: flex;
+  gap: 3px;
+}
+
+.desc {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.dateInfo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.date {
+  font-size: 1.4rem;
+}

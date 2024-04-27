@@ -1,0 +1,29 @@
+.popupCont {
+  width: 114rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid saddlebrown;
+  height: 90vh;
+  overflow: hidden;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+}
+
+.moviePopupImg {
+  width: 100%;
+}
+
+.movieDets {
+  position: relative;
+}
+
+.closeMovieBtn {
+  position: absolute;
+  right: 5%;
+}
+
+.genres {
+  list-style: none;
+}
