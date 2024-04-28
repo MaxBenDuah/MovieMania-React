@@ -1,21 +1,13 @@
 import { useEffect, useState } from "react";
-// import Footer from "./Footer";
 import Search from "./Search/Search";
-// import TrendingMovies from "./TrendingMovies";
 import Pagination from "./Pagination/Pagination";
 import MovieListButtons from "./RenderMoviesByCategory/MovieListButtons";
 import Logo from "./Logo";
 import Header from "./Header/Header";
-// import RenderMoviesByCategory from "./RenderMoviesByCategory/RenderMoviesByCategory";
-// import LoadingSpinner from "./Loader/LoadingSpinner";
 import RenderSearchedMovies from "./Search/RenderSearchedMovies";
 import PopupMovieDetails from "./PopupMovieDetails/PopupMovieDetails";
 import WatchedMovies from "./WatchedMovies/WatchedMovies";
 import CategoryMovies from "./RenderMoviesByCategory/CategoryMovies";
-
-// const KEY = "9b22856c339406c84c600cdd45f5d532";
-
-// const AppContext = React.createContext();
 
 function App() {
   const [query, setQuery] = useState("");
@@ -29,9 +21,6 @@ function App() {
   });
   const [rating, setRating] = useState(0);
   const [searchedMovies, setSearchedMovies] = useState([]);
-  // console.log(pagNum);
-
-  console.log(movieId);
 
   function handleAddMovieId(id) {
     setMovieId(id);
@@ -71,14 +60,6 @@ function App() {
         <Search query={query} setQuery={setQuery} />
       </Header>
 
-      {/* <div>
-        {isLoading ? (
-          <LoadingSpinner size={400} color="#ff5733" />
-        ) : (
-          <RenderMoviesByCategory movies={movies} />
-        )}
-      </div> */}
-
       <Pagination setPageNum={setPageNum} />
       <CategoryMovies movies={movies} isLoading={isLoading} />
       <RenderSearchedMovies
@@ -109,13 +90,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <RenderMoviesByCategory movies={movies} /> */
-}
-{
-  /* <TrendingMovies /> */
-}
-{
-  /* <Footer /> */
-}

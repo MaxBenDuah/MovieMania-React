@@ -6,7 +6,6 @@ const KEY = "9b22856c339406c84c600cdd45f5d532";
 
 function SearchedMovies({ movies, onAddMovieId, setSearchedMovies }) {
   const [genres, setGenres] = useState([]);
-  // const description = movies.overview.split(" ");
   const genreArr = movies.genre_ids;
 
   const { poster_path: poster, title, release_date: date } = movies;
@@ -18,8 +17,6 @@ function SearchedMovies({ movies, onAddMovieId, setSearchedMovies }) {
   const formattedDate = movieDate
     ? new Intl.DateTimeFormat("en-US", options).format(movieDate)
     : "Unknown";
-  // console.log(formattedDate);
-  console.log(movies);
 
   useEffect(
     function () {
@@ -95,13 +92,3 @@ function SearchedMovies({ movies, onAddMovieId, setSearchedMovies }) {
 }
 
 export default SearchedMovies;
-
-{
-  /* <p className={styles.desc}>
-          {description.length > 20 && description.join(" ").slice(0, 200)}...
-        </p> */
-}
-
-{
-  /* <p>⭐️ {Number(movies.vote_average).toFixed(1)}</p> */
-}

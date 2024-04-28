@@ -99,6 +99,12 @@
   display: flex;
   gap: 2rem;
 
+  .activeBtn {
+    background-color: #fa8f45;
+    color: #fff;
+    box-shadow: 0 3rem 9rem rgba(0, 0, 0, 0.12);
+  }
+
   .categoryBtn {
     border: none;
     padding: 0.8rem 1.5rem;
@@ -106,6 +112,7 @@
     transition: all 0.12s;
     cursor: pointer;
     font-size: 1.6rem;
+    border: 0.5px solid #7d3a0b;
 
     &:hover {
       background-color: #fb9d5c;

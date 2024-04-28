@@ -5,10 +5,10 @@ import Button from "../Button";
 const KEY = "9b22856c339406c84c600cdd45f5d532";
 
 function MovieListButtons({ pagNum, setMovies, setIsLoading }) {
-  const [str, setStr] = useState("now_playing");
+  const [activeBtn, setActiveBtn] = useState("now_playing");
 
   function handleInput(str) {
-    setStr(str);
+    setActiveBtn(str);
   }
 
   useEffect(
@@ -18,7 +18,7 @@ function MovieListButtons({ pagNum, setMovies, setIsLoading }) {
           setIsLoading(true);
 
           const res = await fetch(
-            `https://api.themoviedb.org/3/movie/${str}?language=en-US&page=${pagNum}&api_key=${KEY}`
+            `https://api.themoviedb.org/3/movie/${activeBtn}?language=en-US&page=${pagNum}&api_key=${KEY}`
           );
 
           if (!res.ok)
@@ -36,37 +36,39 @@ function MovieListButtons({ pagNum, setMovies, setIsLoading }) {
 
       getMov();
     },
-    [pagNum, str, setMovies, setIsLoading]
+    [pagNum, activeBtn, setMovies, setIsLoading]
   );
 
   return (
     <div className={styles.categoryBtnCont}>
-      {/* <Button
-        className={styles.categoryBtn}
-        onClick={() => handleInput("trending")}
-      >
-        Trending
-      </Button> */}
       <Button
-        className={styles.categoryBtn}
+        className={`${styles.categoryBtn} ${
+          activeBtn === "now_playing" ? styles.activeBtn : ""
+        }`}
         onClick={() => handleInput("now_playing")}
       >
         Now Playing
       </Button>
       <Button
-        className={styles.categoryBtn}
+        className={`${styles.categoryBtn} ${
+          activeBtn === "popular" ? styles.activeBtn : ""
+        }`}
         onClick={() => handleInput("popular")}
       >
         Popular
       </Button>
       <Button
-        className={styles.categoryBtn}
+        className={`${styles.categoryBtn} ${
+          activeBtn === "top_rated" ? styles.activeBtn : ""
+        }`}
         onClick={() => handleInput("top_rated")}
       >
         Top Rated
       </Button>
       <Button
-        className={styles.categoryBtn}
+        className={`${styles.categoryBtn} ${
+          activeBtn === "upcoming" ? styles.activeBtn : ""
+        }`}
         onClick={() => handleInput("upcoming")}
       >
         Upcoming
