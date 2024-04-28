@@ -1,3 +1,71 @@
 .watchedMoviesMainCont {
   padding: 5rem;
+  width: 40%;
+
+  .watchedCont {
+    border: 1px solid #fa8f45;
+    padding: 2rem;
+  }
+}
+
+.watchedListCont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  border-bottom: 0.5px solid #fa8f45;
+  transition: all 0.3s;
+
+  .watchedImgCont {
+    // width: 50%;
+
+    .watchedImg {
+      width: 50%;
+      display: block;
+    }
+  }
+
+  .watchedDetsCont {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .watchedDets {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .watchedTitle {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+
+      .watchedMovieSpecifics {
+        display: flex;
+        gap: 1rem;
+
+        & p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .deleteBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: #dc2626;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: #fa8f45;
+  }
 }
