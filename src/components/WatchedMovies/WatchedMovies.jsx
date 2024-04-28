@@ -6,7 +6,7 @@ function WatchedMovies({ watchedMoviesData, onDeleteWatchedMovie, rating }) {
     <div className={styles.watchedMoviesMainCont}>
       <h2>Watched Movies</h2>
       <ul className={styles.watchedCont}>
-        {watchedMoviesData.map((movie) => (
+        {watchedMoviesData?.map((movie) => (
           <Watched
             key={movie.id}
             movie={movie}
