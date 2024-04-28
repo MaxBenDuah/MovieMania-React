@@ -27,7 +27,6 @@ function Watched({ movie, onDeleteWatchedMovie, rating }) {
             <p>⭐️ {Number(movieRating).toFixed(1)}</p>
             <p>🤩 {rating}</p>
             <p>⏱ {runtime} min</p>
-            {/* <button onClick={() => onDeleteWatchedMovie(movie.id)}>X</button> */}
           </div>
         </div>
         <button

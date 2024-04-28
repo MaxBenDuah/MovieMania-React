@@ -1,6 +1,4 @@
 .mainCategory {
-  // max-width: 114rem;
-  // margin: auto;
   padding: 5rem;
 }
 
@@ -18,28 +16,19 @@
 
   .cardSide {
     transition: all 0.4s ease;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
     backface-visibility: hidden;
-    // height: 52rem;
     border-radius: 3px;
-    // box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     overflow: hidden;
   }
 
   .cardSideBack {
     transform: rotateY(180deg);
-    // background-color: #fb9d5c;
     background-image: linear-gradient(to right bottom, #fdc7a2, #fa812d);
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     color: #181010;
-    // display: flex;
-    // align-items: center;
 
     .movieDets {
       margin-top: 3rem;

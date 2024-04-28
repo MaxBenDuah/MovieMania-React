@@ -7,8 +7,6 @@ const KEY = "9b22856c339406c84c600cdd45f5d532";
 function MovieCasts({ movieId }) {
   const [castData, setCastData] = useState({});
 
-  // const { casts } = castData;
-
   useEffect(
     function () {
       async function getCastsData() {

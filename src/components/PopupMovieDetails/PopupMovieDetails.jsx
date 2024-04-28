@@ -4,7 +4,6 @@ import MovieCasts from "../MovieCasts/MovieCasts";
 import StarRating from "../StarRating/StarRating";
 import { HeartStraight } from "@phosphor-icons/react";
 import { X } from "@phosphor-icons/react";
-// import StarRating from "../StarRating/StarRating";
 
 const KEY = "9b22856c339406c84c600cdd45f5d532";
 
@@ -144,7 +143,6 @@ function PopupMovieDetails({
               0{hour}:{minutes}:00
             </p>
           </div>
-          {/* <p>{runtime}</p> */}
           <div className={styles.releaseDate}>
             <h2>Release Date</h2>
             <p>{date}</p>
