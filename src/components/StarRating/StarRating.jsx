@@ -15,6 +15,7 @@ const textStyle = {
   fontSize: "24px",
   lineHeight: "1",
   margin: "0",
+  color: "#fa8f45",
 };
 
 const StarRating = function ({

@@ -18,7 +18,8 @@ function SearchedMovies({ movies, onAddMovieId }) {
   const formattedDate = movieDate
     ? new Intl.DateTimeFormat("en-US", options).format(movieDate)
     : "Unknown";
-  console.log(formattedDate);
+  // console.log(formattedDate);
+  console.log(movies);
 
   useEffect(
     function () {

@@ -1,9 +1,51 @@
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
 .movieCastCont {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  row-gap: 2rem;
 }
 
-.castImg {
-  width: 20%;
+.castImgCont {
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure the image is perfectly rounded */
+  border-radius: 50%; /* Make the container perfectly rounded */
+  margin-bottom: 0.5rem;
+
+  .castImg {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: contain; /* Ensure the image is contained within the container */
+    /* Make the image perfectly rounded */
+  }
 }
+.characterName {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+// .castImgCont {
+//   width: 8rem;
+//   height: 8rem;
+//   border-radius: 50%;
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .castImg {
+//   display: inline-block;
+//   border-radius: 50%;
+//   width: 6rem;
+//   width: 80%;
+//   height: 80%;
+//   clip-path: circle(50% at 50% 50%);
+//   height: auto;
+//   border-radius: 50%;
+// }

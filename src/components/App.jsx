@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 // import Footer from "./Footer";
 import Search from "./Search/Search";
 // import TrendingMovies from "./TrendingMovies";
-import Pagination from "./Pagination";
+import Pagination from "./Pagination/Pagination";
 import MovieListButtons from "./RenderMoviesByCategory/MovieListButtons";
 import Logo from "./Logo";
 import Header from "./Header/Header";
@@ -31,7 +31,7 @@ function App() {
   const [searchedMovies, setSearchedMovies] = useState([]);
   // console.log(pagNum);
 
-  // console.log(movieId);
+  console.log(movieId);
 
   function handleAddMovieId(id) {
     setMovieId(id);
@@ -83,6 +83,7 @@ function App() {
         )}
       </div> */}
 
+      <Pagination setPageNum={setPageNum} />
       <CategoryMovies movies={movies} isLoading={isLoading} />
       <RenderSearchedMovies
         query={query}
@@ -101,12 +102,12 @@ function App() {
           watchedMoviesData={watchedMoviesData}
         />
       )}
+      <Pagination setPageNum={setPageNum} />
       <WatchedMovies
         watchedMoviesData={watchedMoviesData}
         onDeleteWatchedMovie={handleDeleteWatchedMovies}
         rating={rating}
       />
-      <Pagination setPageNum={setPageNum} />
     </div>
   );
 }

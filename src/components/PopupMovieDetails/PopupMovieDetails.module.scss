@@ -2,28 +2,148 @@
   width: 114rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border: 1px solid saddlebrown;
+  // border: 1px solid saddlebrown;
   height: 90vh;
   overflow: hidden;
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fa8f45;
+  border-radius: 5px;
 }
 
 .moviePopupImg {
+  display: block;
   width: 100%;
+  object-fit: contain;
 }
 
 .movieDets {
-  position: relative;
+  // position: relative;
+  // margin-top: 2rem;
+  padding: 3rem;
+  color: #fee3d0;
+
+  .movieTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .movieTagline {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 4rem;
+  }
+
+  .desc {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .overview {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .rating {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 0.5px solid #fbab73;
+    width: 65%;
+    margin: auto;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.12);
+    margin-bottom: 4rem;
+    background-color: #fee3d0;
+
+    .btnCont {
+      display: flex;
+      justify-content: center;
+
+      .favoriteBtn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        padding: 1.2rem 4rem;
+        border-radius: 100px;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .movieSpecificsCont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+
+    .duration {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .releaseDate {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .genreCont {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .genres {
+        list-style: none;
+        display: flex;
+        gap: 1px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .ratingNum {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    & h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    & p {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .closeMovieBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  top: 2%;
+  margin-right: -4rem;
+  // right: -4%;
+  height: 4rem;
+  width: 4rem;
+  border: none;
   right: 5%;
-}
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s;
 
-.genres {
-  list-style: none;
+  &:hover {
+    background-color: #fcb98b;
+    color: #fff;
+  }
 }

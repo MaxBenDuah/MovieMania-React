@@ -10,7 +10,7 @@ function Search({ query, setQuery, setSearchedMovies }) {
 
   function handleBlur() {
     setExpanded(false);
-    setSearchedMovies([]);
+    // setSearchedMovies([]);
     setQuery("");
   }
 

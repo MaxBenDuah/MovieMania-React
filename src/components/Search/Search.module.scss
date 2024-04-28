@@ -2,7 +2,7 @@
   position: absolute;
   top: 10%;
   right: 2%;
-  background-color: #fa8f45;
+  background-color: #fef1e8;
   width: 21%;
   height: 900px;
   overflow: auto;
@@ -42,7 +42,8 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #fef1e8;
+    background-color: #fa8f45;
+    // background-color: #fa8f45;
   }
   // gap: 2rem;
   // justify-items: center;

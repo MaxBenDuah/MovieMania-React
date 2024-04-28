@@ -27,11 +27,14 @@ function MovieCasts({ movieId }) {
   );
 
   return (
-    <ul className={styles.movieCastCont}>
-      {castData?.cast?.slice(0, 10).map((cast) => (
-        <Casts key={cast.id} cast={cast} />
-      ))}
-    </ul>
+    <div>
+      <h2>Top Cast</h2>
+      <ul className={styles.movieCastCont}>
+        {castData?.cast?.slice(0, 10).map((cast) => (
+          <Casts key={cast.id} cast={cast} />
+        ))}
+      </ul>
+    </div>
   );
 }
 
