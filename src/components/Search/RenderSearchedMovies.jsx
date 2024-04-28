@@ -53,6 +53,7 @@ function RenderSearchedMovies({
           key={movies.id}
           movies={movies}
           onAddMovieId={onAddMovieId}
+          setSearchedMovies={setSearchedMovies}
         />
       ))}
     </ul>

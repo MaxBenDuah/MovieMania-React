@@ -41,12 +41,12 @@ function MovieListButtons({ pagNum, setMovies, setIsLoading }) {
 
   return (
     <div className={styles.categoryBtnCont}>
-      <Button
+      {/* <Button
         className={styles.categoryBtn}
         onClick={() => handleInput("trending")}
       >
         Trending
-      </Button>
+      </Button> */}
       <Button
         className={styles.categoryBtn}
         onClick={() => handleInput("now_playing")}

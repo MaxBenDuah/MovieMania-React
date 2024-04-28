@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Search.module.scss";
 
-function Search({ query, setQuery, setSearchedMovies }) {
+function Search({ query, setQuery }) {
   const [expanded, setExpanded] = useState(false);
 
   function handleFocus() {
@@ -10,11 +10,8 @@ function Search({ query, setQuery, setSearchedMovies }) {
 
   function handleBlur() {
     setExpanded(false);
-    // setSearchedMovies([]);
     setQuery("");
   }
-
-  // className={styles.search}
 
   return (
     <input

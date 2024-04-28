@@ -132,7 +132,6 @@
   position: absolute;
   top: 2%;
   margin-right: -4rem;
-  // right: -4%;
   height: 4rem;
   width: 4rem;
   border: none;
@@ -143,7 +142,7 @@
   transition: all 0.3s;
 
   &:hover {
-    background-color: #fcb98b;
+    background-color: #dc2626;
     color: #fff;
   }
 }

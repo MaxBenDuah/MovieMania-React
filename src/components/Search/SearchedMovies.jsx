@@ -4,7 +4,7 @@ import styles from "./Search.module.scss";
 
 const KEY = "9b22856c339406c84c600cdd45f5d532";
 
-function SearchedMovies({ movies, onAddMovieId }) {
+function SearchedMovies({ movies, onAddMovieId, setSearchedMovies }) {
   const [genres, setGenres] = useState([]);
   // const description = movies.overview.split(" ");
   const genreArr = movies.genre_ids;
@@ -51,6 +51,21 @@ function SearchedMovies({ movies, onAddMovieId }) {
       getGenres();
     },
     [genreArr]
+  );
+
+  useEffect(
+    function () {
+      function closeSearchMovies() {
+        setSearchedMovies([]);
+      }
+
+      document.addEventListener("click", closeSearchMovies);
+
+      return () => {
+        document.removeEventListener("click", closeSearchMovies);
+      };
+    },
+    [setSearchedMovies]
   );
 
   return (

@@ -68,11 +68,7 @@ function App() {
           setMovies={setMovies}
           setIsLoading={setIsLoading}
         />
-        <Search
-          query={query}
-          setQuery={setQuery}
-          setSearchedMovies={setSearchedMovies}
-        />
+        <Search query={query} setQuery={setQuery} />
       </Header>
 
       {/* <div>
