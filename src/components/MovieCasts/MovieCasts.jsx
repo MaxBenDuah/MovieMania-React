@@ -16,7 +16,6 @@ function MovieCasts({ movieId }) {
 
         const data = await res.json();
         setCastData(data);
-        console.log(data);
       }
 
       getCastsData();

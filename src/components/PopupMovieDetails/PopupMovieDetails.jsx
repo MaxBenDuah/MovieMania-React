@@ -54,7 +54,6 @@ function PopupMovieDetails({
         const data = await res.json();
 
         setMoviePopup(data);
-        console.log(data);
       }
 
       getMovieById();
