@@ -1,0 +1,30 @@
+.paginationCont {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+
+  .paginationBtnsCont {
+    display: flex;
+    gap: 2rem;
+
+    .paginationBtn {
+      display: inline-block;
+      padding: 1.5rem;
+      border: none;
+      border: 1px solid #fa8f45;
+      border-radius: 2px;
+      background: #fef1e8;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fb9d5c;
+        color: #fff;
+      }
+    }
+
+    .activeBtn {
+      background-color: #fa8f45;
+      color: #fff;
+    }
+  }
+}
