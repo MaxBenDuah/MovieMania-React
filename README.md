@@ -1,8 +1,45 @@
-# React + Vite
+# MovieMania: Your Gateway to Cinematic Bliss
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieMania – a React and Vite-powered website
 
-Currently, two official plugins are available:
+MovieMania is an immersive web application that puts the world of cinema at your fingertips. Explore a vast collection of movies, ranging from timeless classics to the latest blockbusters, all in one place. With intuitive search functionality, curated categories, and personalized watchlists, MovieMania offers a seamless movie-watching experience tailored to your preferences.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshots
+
+![App Screenshot](https://github.com/MaxBenDuah/miscellaneous-resources/blob/main/screenshot-moviemania-1.png?raw=true)
+
+![App Screenshot](https://github.com/MaxBenDuah/miscellaneous-resources/blob/main/screenshot-moviemania-2.png?raw=true)
+
+![App Screenshot](https://github.com/MaxBenDuah/miscellaneous-resources/blob/main/screenshot-moviemania-3.png?raw=true)
+
+![App Screenshot](https://github.com/MaxBenDuah/miscellaneous-resources/blob/main/screenshot-moviemania-4.png?raw=true)
+
+![App Screenshot](https://github.com/MaxBenDuah/miscellaneous-resources/blob/main/screenshot-moviemania-5.png?raw=true)
+
+![App Screenshot](https://github.com/MaxBenDuah/miscellaneous-resources/blob/main/screenshot-moviemania-6.png?raw=true)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/MaxBenDuah/MovieMania-React.git
+```
+
+Navigate to the project directory
+
+```bash
+  cd MovieMania-React
+```
+
+Run the project in your browser
+
+```bash
+  npm run dev
+```
+
+Open the project in your browser
+
+## Demo
+
+https://moviemania-mbd.netlify.app/
