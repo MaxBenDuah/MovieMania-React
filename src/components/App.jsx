@@ -21,6 +21,7 @@ function App() {
   });
   const [rating, setRating] = useState(0);
   const [searchedMovies, setSearchedMovies] = useState([]);
+  const [activePage, setActivePage] = useState(1);
 
   function handleAddMovieId(id) {
     setMovieId(id);
@@ -60,7 +61,11 @@ function App() {
         <Search query={query} setQuery={setQuery} />
       </Header>
 
-      <Pagination setPageNum={setPageNum} />
+      <Pagination
+        setPageNum={setPageNum}
+        activePage={activePage}
+        setActivePage={setActivePage}
+      />
       <CategoryMovies movies={movies} isLoading={isLoading} />
       <RenderSearchedMovies
         query={query}
@@ -79,7 +84,11 @@ function App() {
           watchedMoviesData={watchedMoviesData}
         />
       )}
-      <Pagination setPageNum={setPageNum} />
+      <Pagination
+        setPageNum={setPageNum}
+        activePage={activePage}
+        setActivePage={setActivePage}
+      />
       <WatchedMovies
         watchedMoviesData={watchedMoviesData}
         onDeleteWatchedMovie={handleDeleteWatchedMovies}
