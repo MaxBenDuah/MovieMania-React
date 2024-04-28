@@ -9,6 +9,7 @@ const mainContainerStyle = {
 
 const starContainer = {
   display: "flex",
+  cursor: "pointer",
 };
 
 const textStyle = {

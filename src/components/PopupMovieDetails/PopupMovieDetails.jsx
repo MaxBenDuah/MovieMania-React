@@ -93,13 +93,12 @@ function PopupMovieDetails({
 
   return (
     <div className={styles.popupCont}>
-      <div>
-        <img
-          className={styles.moviePopupImg}
-          src={`https://image.tmdb.org/t/p/w780${poster}`}
-          alt={title}
-        />
-      </div>
+      <img
+        className={styles.moviePopupImg}
+        src={`https://image.tmdb.org/t/p/w780${poster}`}
+        alt={title}
+      />
+
       <div className={styles.movieDets}>
         <button className={styles.closeMovieBtn} onClick={onCloseSelectedMovie}>
           <X size={32} />
@@ -132,7 +131,7 @@ function PopupMovieDetails({
                 )}
               </div>
             ) : (
-              <p>You rated this movie</p>
+              <p>You rated this movie!</p>
             )}
           </div>
         </div>
@@ -144,7 +143,7 @@ function PopupMovieDetails({
             </p>
           </div>
           <div className={styles.releaseDate}>
-            <h2>Release Date</h2>
+            <h2>Date</h2>
             <p>{date}</p>
           </div>
           <div className={styles.genreCont}>
