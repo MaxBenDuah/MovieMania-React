@@ -2,8 +2,6 @@ import styles from "./WatchedMovies.module.scss";
 import { X } from "@phosphor-icons/react";
 
 function Watched({ movie, onDeleteWatchedMovie, rating }) {
-  // console.log(movie);
-
   const {
     poster_path: poster,
     title,

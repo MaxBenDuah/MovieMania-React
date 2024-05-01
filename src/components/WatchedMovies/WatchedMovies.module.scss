@@ -46,21 +46,21 @@
         }
       }
     }
-  }
 
-  .deleteBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    background-color: #dc2626;
-    border: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    cursor: pointer;
+    .deleteBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 2%;
+      right: 2%;
+      background-color: #dc2626;
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
   }
 
   &:hover {
