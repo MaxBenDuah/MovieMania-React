@@ -24,13 +24,13 @@
   background-position: 1rem center;
   font-family: inherit;
   color: #190b02;
+}
 
-  &.expanded {
-    width: 22%;
-    padding-left: 3.5rem;
-    filter: invert(75%) sepia(11%) saturate(543%) hue-rotate(221deg)
-      brightness(92%) contrast(89%);
-  }
+.expanded {
+  width: 22%;
+  padding-left: 3.5rem;
+  filter: invert(75%) sepia(11%) saturate(543%) hue-rotate(221deg)
+    brightness(92%) contrast(89%);
 }
 
 .listSearch {
@@ -44,39 +44,34 @@
   &:hover {
     background-color: #fa8f45;
   }
-}
 
-.searchedImg {
-  width: 100%;
-  display: block;
-  justify-self: end;
-  padding: 8px;
-}
+  .searchedImg {
+    width: 100%;
+    display: block;
+    justify-self: end;
+    padding: 8px;
+  }
 
-.movieDets {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 8px;
-}
+  .movieDets {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 8px;
 
-.genreCont {
-  list-style: none;
-  display: flex;
-  gap: 3px;
-}
+    .genreCont {
+      list-style: none;
+      display: flex;
+      gap: 3px;
+    }
 
-.desc {
-  font-size: 0.9rem;
-  line-height: 1.2;
-}
+    .dateInfo {
+      display: flex;
+      gap: 8px;
+      align-items: center;
 
-.dateInfo {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.date {
-  font-size: 1.4rem;
+      .date {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
