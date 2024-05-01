@@ -19,6 +19,10 @@
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
+
+    .listMoviesCategoryImg {
+      width: 100%;
+    }
   }
 
   .cardSideBack {
@@ -78,10 +82,6 @@
   &:hover .cardSideBack {
     transform: rotateY(0);
   }
-}
-
-.listMoviesCategoryImg {
-  width: 100%;
 }
 
 .categoryBtnCont {
