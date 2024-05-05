@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import styles from "./PopupMovieDetails.module.scss";
-import MovieCasts from "../MovieCasts/MovieCasts";
-import StarRating from "../StarRating/StarRating";
 import { HeartStraight } from "@phosphor-icons/react";
 import { X } from "@phosphor-icons/react";
+
+import styles from "./PopupMovieDetails.module.scss";
+import StarRating from "../StarRating/StarRating";
+import MovieCasts from "../MovieCasts/MovieCasts";
 
 const KEY = "9b22856c339406c84c600cdd45f5d532";
 

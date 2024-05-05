@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
 import Search from "./Search/Search";
 import Pagination from "./Pagination/Pagination";
 import MovieListButtons from "./RenderMoviesByCategory/MovieListButtons";
@@ -8,6 +9,7 @@ import RenderSearchedMovies from "./Search/RenderSearchedMovies";
 import PopupMovieDetails from "./PopupMovieDetails/PopupMovieDetails";
 import WatchedMovies from "./WatchedMovies/WatchedMovies";
 import CategoryMovies from "./RenderMoviesByCategory/CategoryMovies";
+import { useLocalStorageState } from "./useLocalStorageState";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -15,10 +17,10 @@ function App() {
   const [movies, setMovies] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [movieId, setMovieId] = useState(null);
-  const [watchedMoviesData, setWatchedMoviesData] = useState(function () {
-    const storedValue = localStorage.getItem("watchedMovies");
-    return JSON.parse(storedValue);
-  });
+  const [watchedMoviesData, setWatchedMoviesData] = useLocalStorageState(
+    [],
+    "watchedMovies"
+  );
   const [rating, setRating] = useState(0);
   const [searchedMovies, setSearchedMovies] = useState([]);
   const [activePage, setActivePage] = useState(1);
@@ -40,13 +42,6 @@ function App() {
       prevWatchedMovie.filter((movie) => movie.id !== id)
     );
   }
-
-  useEffect(
-    function () {
-      localStorage.setItem("watchedMovies", JSON.stringify(watchedMoviesData));
-    },
-    [watchedMoviesData]
-  );
 
   return (
     <div>
