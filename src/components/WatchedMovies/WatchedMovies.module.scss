@@ -1,6 +1,32 @@
+.message {
+  padding: 5rem;
+
+  & h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #fa8f45;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 2rem;
+  }
+
+  .messageDets {
+    font-size: 2rem;
+    width: 40%;
+    line-height: 1.7;
+  }
+}
+
 .watchedMoviesMainCont {
   padding: 5rem;
   width: 40%;
+
+  & h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #fa8f45;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 2rem;
+  }
 
   .watchedCont {
     border: 1px solid #fa8f45;
