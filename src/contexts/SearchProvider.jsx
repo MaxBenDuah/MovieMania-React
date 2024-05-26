@@ -27,7 +27,7 @@ function reducer(state, action) {
     case "movies/loaded":
       return { ...state, searchedMovies: action.payload };
     case "search/close":
-      return { ...state, searchedMovies: [] }; //this is actually like setting initial state but let's come back later
+      return { ...state, searchedMovies: [] };
     default:
       throw new Error("Unknown action type");
   }
