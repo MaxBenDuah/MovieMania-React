@@ -1,7 +1,10 @@
+import { useWatchedMovies } from "../../contexts/WatchedMoviesProvider";
 import styles from "./WatchedMovies.module.scss";
 import { X } from "@phosphor-icons/react";
 
-function Watched({ movie, onDeleteWatchedMovie, rating }) {
+function Watched({ movie }) {
+  const { rating, dispatch } = useWatchedMovies();
+
   const {
     poster_path: poster,
     title,
@@ -29,7 +32,9 @@ function Watched({ movie, onDeleteWatchedMovie, rating }) {
         </div>
         <button
           className={styles.deleteBtn}
-          onClick={() => onDeleteWatchedMovie(movie.id)}
+          onClick={() =>
+            dispatch({ type: "watchedMovies/delete", payload: movie.id })
+          }
         >
           <X color="#fff" size={12} />
         </button>

@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
+
 import Casts from "./Casts";
 import styles from "./MovieCasts.module.scss";
+import { useWatchedMovies } from "../../contexts/WatchedMoviesProvider";
 
 const KEY = "9b22856c339406c84c600cdd45f5d532";
+const BASE_URL = "https://api.themoviedb.org/3";
 
-function MovieCasts({ movieId }) {
+function MovieCasts() {
+  const { movieId } = useWatchedMovies();
   const [castData, setCastData] = useState({});
 
   useEffect(
     function () {
       async function getCastsData() {
         const res = await fetch(
-          `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${KEY}`
+          `${BASE_URL}/movie/${movieId}/credits?api_key=${KEY}`
         );
 
         const data = await res.json();

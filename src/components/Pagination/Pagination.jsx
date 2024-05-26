@@ -1,6 +1,9 @@
+import { useMovieData } from "../../contexts/MovieDataProvider";
 import styles from "./Pagination.module.scss";
 
-function Pagination({ setPageNum, activePage, setActivePage }) {
+function Pagination() {
+  const { activePage, dispatch } = useMovieData();
+
   return (
     <div className={styles.paginationCont}>
       <div className={styles.paginationBtnsCont}>
@@ -10,8 +13,8 @@ function Pagination({ setPageNum, activePage, setActivePage }) {
               num === activePage ? styles.activeBtn : ""
             }`}
             onClick={() => {
-              setPageNum(num);
-              setActivePage(num);
+              dispatch({ type: "movie/getPageNum", payload: num });
+              dispatch({ type: "movie/activePage", payload: num });
             }}
             key={num}
           >

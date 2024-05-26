@@ -1,16 +1,15 @@
-import { useState } from "react";
 import styles from "./Search.module.scss";
+import { useSearch } from "../../contexts/SearchProvider";
 
-function Search({ query, setQuery }) {
-  const [expanded, setExpanded] = useState(false);
+function Search() {
+  const { query, dispatch, expanded } = useSearch();
 
   function handleFocus() {
-    setExpanded(true);
+    dispatch({ type: "search/expand" });
   }
 
   function handleBlur() {
-    setExpanded(false);
-    setQuery("");
+    dispatch({ type: "search/blur" });
   }
 
   return (
@@ -18,7 +17,9 @@ function Search({ query, setQuery }) {
       type="text"
       placeholder="Find movies, shows, and more"
       value={query}
-      onChange={(e) => setQuery(e.target.value)}
+      onChange={(e) =>
+        dispatch({ type: "search/query", payload: e.target.value })
+      }
       className={`${styles.search} ${expanded ? styles.expanded : ""}`}
       onFocus={handleFocus}
       onBlur={handleBlur}

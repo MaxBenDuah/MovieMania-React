@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { Calendar } from "@phosphor-icons/react";
 import styles from "./Search.module.scss";
+import { useWatchedMovies } from "../../contexts/WatchedMoviesProvider";
 
 const KEY = "9b22856c339406c84c600cdd45f5d532";
+const BASE_URL = "https://api.themoviedb.org/3";
 
-function SearchedMovies({ movies, onAddMovieId, setSearchedMovies }) {
+function SearchedMovies({ movies }) {
+  const { dispatch } = useWatchedMovies();
+
   const [genres, setGenres] = useState([]);
   const genreArr = movies.genre_ids;
 
@@ -22,10 +26,9 @@ function SearchedMovies({ movies, onAddMovieId, setSearchedMovies }) {
     function () {
       async function getGenres() {
         //Getting Genre Data
-
         try {
           const genreRes = await fetch(
-            `https://api.themoviedb.org/3/genre/movie/list?api_key=${KEY}`
+            `${BASE_URL}/genre/movie/list?api_key=${KEY}`
           );
 
           if (!genreRes.ok) throw new Error("Something went wrong");
@@ -50,23 +53,13 @@ function SearchedMovies({ movies, onAddMovieId, setSearchedMovies }) {
     [genreArr]
   );
 
-  useEffect(
-    function () {
-      function closeSearchMovies() {
-        setSearchedMovies([]);
-      }
-
-      document.addEventListener("click", closeSearchMovies);
-
-      return () => {
-        document.removeEventListener("click", closeSearchMovies);
-      };
-    },
-    [setSearchedMovies]
-  );
-
   return (
-    <li className={styles.listSearch} onClick={() => onAddMovieId(movies.id)}>
+    <li
+      className={styles.listSearch}
+      onClick={() =>
+        dispatch({ type: "searchedMovie/selected", payload: movies.id })
+      }
+    >
       <div>
         <img
           src={`https://image.tmdb.org/t/p/w780${poster}`}

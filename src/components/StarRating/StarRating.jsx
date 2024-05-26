@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Star from "./Star";
+import { useWatchedMovies } from "../../contexts/WatchedMoviesProvider";
 
 const mainContainerStyle = {
   display: "flex",
@@ -25,14 +26,12 @@ const StarRating = function ({
   size = 24,
   message = [],
   className = "",
-  rating,
-  setRating,
 }) {
-  // const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
+  const { rating, dispatch } = useWatchedMovies();
 
   const handleRating = (ratingNum) => {
-    setRating(ratingNum);
+    dispatch({ type: "rating/getNum", payload: ratingNum });
   };
 
   const handleTempRating = (ratingNum) => {

@@ -3,6 +3,7 @@ import styles from "./RenderMoviesByCategory.module.scss";
 import { Calendar } from "@phosphor-icons/react";
 
 const KEY = "9b22856c339406c84c600cdd45f5d532";
+const BASE_URL = "https://api.themoviedb.org/3";
 
 function MovieCategory({ movie }) {
   const [genres, setGenres] = useState([]);
@@ -22,7 +23,7 @@ function MovieCategory({ movie }) {
     function () {
       async function getGenres() {
         const genreRes = await fetch(
-          `https://api.themoviedb.org/3/genre/movie/list?api_key=${KEY}`
+          `${BASE_URL}/genre/movie/list?api_key=${KEY}`
         );
 
         if (!genreRes.ok) throw new Error("Error while fetching genre data");

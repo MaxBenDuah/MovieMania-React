@@ -1,11 +1,12 @@
+import { useWatchedMovies } from "../../contexts/WatchedMoviesProvider";
 import Message from "../Message/Message";
 import Watched from "./Watched";
 import styles from "./WatchedMovies.module.scss";
 
-function WatchedMovies({ watchedMoviesData, onDeleteWatchedMovie, rating }) {
+function WatchedMovies() {
+  const { watchedMoviesData } = useWatchedMovies();
   //Displaying a message in the watchedMovies box if there are no watched movies added
-
-  if (!watchedMoviesData.length)
+  if (!watchedMoviesData?.length)
     return (
       <div className={styles.message}>
         <h2>Watched Movies</h2>
@@ -21,12 +22,7 @@ function WatchedMovies({ watchedMoviesData, onDeleteWatchedMovie, rating }) {
       <h2>Watched Movies</h2>
       <ul className={styles.watchedCont}>
         {watchedMoviesData?.map((movie) => (
-          <Watched
-            key={movie.id}
-            movie={movie}
-            onDeleteWatchedMovie={onDeleteWatchedMovie}
-            rating={rating}
-          />
+          <Watched key={movie.id} movie={movie} />
         ))}
       </ul>
     </div>
