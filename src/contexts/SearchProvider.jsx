@@ -22,10 +22,8 @@ function reducer(state, action) {
       return { ...state, query: "", expanded: false };
     case "loading":
       return { ...state, isLoading: true };
-    case "notLoading":
-      return { ...state, isLoading: false };
     case "movies/loaded":
-      return { ...state, searchedMovies: action.payload };
+      return { ...state, searchedMovies: action.payload, isLoading: false };
     case "search/close":
       return { ...state, searchedMovies: [] };
     default:
@@ -60,8 +58,6 @@ function SearchProvider({ children }) {
           if (err.name !== "AbortError") {
             console.error(err.message);
           }
-        } finally {
-          dispatch({ type: "notLoading" });
         }
       }
 

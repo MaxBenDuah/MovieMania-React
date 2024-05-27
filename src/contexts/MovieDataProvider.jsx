@@ -22,11 +22,9 @@ function reducer(state, action) {
     case "movie/activeBtn":
       return { ...state, activeBtn: action.payload };
     case "movie/loading":
-      return { ...state, isLoading: action.payload };
-    case "movie/notLoading":
-      return { ...state, isLoading: action.payload };
+      return { ...state, isLoading: true };
     case "movies/loaded":
-      return { ...state, movies: action.payload };
+      return { ...state, movies: action.payload, isLoading: false };
     default:
       throw new Error("Unknown action type");
   }
@@ -40,7 +38,7 @@ function MovieDataProvider({ children }) {
     function () {
       async function getMov() {
         try {
-          dispatch({ type: "movie/loading", payload: true });
+          dispatch({ type: "movie/loading" });
 
           const res = await fetch(
             `${BASE_URL}/movie/${activeBtn}?language=en-US&page=${pageNum}&api_key=${KEY}`
@@ -54,8 +52,6 @@ function MovieDataProvider({ children }) {
           dispatch({ type: "movies/loaded", payload: data.results });
         } catch (err) {
           console.error(err.message);
-        } finally {
-          dispatch({ type: "movie/notLoading", payload: false });
         }
       }
 
