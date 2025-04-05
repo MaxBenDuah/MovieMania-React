@@ -7,6 +7,14 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 4rem;
   list-style: none;
+
+  @media (max-width: 62em) {
+    grid-template-columns: repeat((4, 1fr));
+  }
+
+  @media (max-width: 50em) {
+    grid-template-columns: repeat((2, 1fr));
+  }
 }
 
 .card {
@@ -87,6 +95,11 @@
 .categoryBtnCont {
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 31em) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
   .activeBtn {
     background-color: #fa8f45;

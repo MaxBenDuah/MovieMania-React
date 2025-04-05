@@ -24,6 +24,14 @@
   background-position: 1rem center;
   font-family: inherit;
   color: #190b02;
+
+  @media (max-width: 62em) {
+    width: 60%;
+  }
+
+  @media (max-width: 53em) {
+    width: 100%;
+  }
 }
 
 .expanded {
@@ -31,6 +39,14 @@
   padding-left: 3.5rem;
   filter: invert(75%) sepia(11%) saturate(543%) hue-rotate(221deg)
     brightness(92%) contrast(89%);
+
+  @media (max-width: 62em) {
+    width: 60%;
+  }
+
+  @media (max-width: 53em) {
+    width: 100%;
+  }
 }
 
 .listSearch {

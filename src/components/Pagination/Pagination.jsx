@@ -7,7 +7,7 @@ function Pagination() {
   return (
     <div className={styles.paginationCont}>
       <div className={styles.paginationBtnsCont}>
-        {Array.from({ length: 15 }, (_, i) => i + 1).map((num) => (
+        {Array.from({ length: 16 }, (_, i) => i + 1).map((num) => (
           <button
             className={`${styles.paginationBtn} ${
               num === activePage ? styles.activeBtn : ""
